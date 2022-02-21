@@ -20,7 +20,7 @@ log = read_file.split('\n')
 oct_94 = open("October_1994", "w")
 for line in log:
     if "Oct/1994" in line:
-        oct_94.write(line)
+        oct_94.write(line + "\n")
         
 oct_94.close()
         
