@@ -1,6 +1,7 @@
 # This will be the main file
 import urllib.request
 import os.path
+import re
 
 # Checks to see if the file exists, if it does NOT exist, download it and countine running.
 if not(os.path.isfile('awslog.txt')):  
