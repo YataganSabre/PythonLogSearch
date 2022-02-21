@@ -15,6 +15,7 @@ read_file = file.read()
 log = read_file.split('\n')
 
 # Splits file into 12 seperate monthly files
+# OCTOBER 1994
 oct_94 = open("October_1994", "w")
 for line in log:
     if "Oct/1994" in line:
@@ -22,6 +23,7 @@ for line in log:
         
 oct_94.close()
 
+# NOVEMBER 1994
 nov_94 = open("November_1994", "w")
 for line in log:
     if "Nov/1994" in line:
@@ -29,6 +31,7 @@ for line in log:
         
 nov_94.close()
 
+# DECEMBER 1994
 dec_94 = open("December_1994", "w")
 for line in log:
     if "Dec/1994" in line:
@@ -36,6 +39,7 @@ for line in log:
         
 dec_94.close()
 
+# JANUARY 1995
 jan_95 = open("January_1995", "w")
 for line in log:
     if "Jan/1995" in line:
@@ -43,6 +47,7 @@ for line in log:
         
 jan_95.close()
 
+# FEBRUARY 1995
 feb_95 = open("February_1995", "w")
 for line in log:
     if "Feb/1995" in line:
@@ -50,6 +55,7 @@ for line in log:
         
 feb_95.close()
 
+# MARCH 1995
 mar_95 = open("March_1995", "w")
 for line in log:
     if "Mar/1995" in line:
@@ -57,6 +63,7 @@ for line in log:
         
 mar_95.close()
 
+# APRIL 1995
 apr_95 = open("April_1995", "w")
 for line in log:
     if "Apr/1995" in line:
@@ -64,6 +71,7 @@ for line in log:
         
 apr_95.close()
 
+# MAY 1995
 may_95 = open("May_1995", "w")
 for line in log:
     if "May/1995" in line:
@@ -71,6 +79,7 @@ for line in log:
         
 may_95.close()
 
+# JUNE 1995
 jun_95 = open("June_1995", "w")
 for line in log:
     if "Jun/1995" in line:
@@ -78,6 +87,7 @@ for line in log:
         
 jun_95.close()
 
+# JULY 1995
 jul_95 = open("July_1995", "w")
 for line in log:
     if "Jul/1995" in line:
@@ -85,6 +95,7 @@ for line in log:
         
 jul_95.close()
 
+# AUGUST 1995
 aug_95 = open("August_1995", "w")
 for line in log:
     if "Aug/1995" in line:
@@ -92,6 +103,7 @@ for line in log:
         
 aug_95.close()
 
+# SEPTEMBER 1995
 sep_95 = open("September_1995", "w")
 for line in log:
     if "Sep/1995" in line:
@@ -99,6 +111,7 @@ for line in log:
         
 sep_95.close()
 
+# OCTOBER 1995
 oct_95 = open("October_1995", "w")
 for line in log:
     if "Oct/1995" in line:
