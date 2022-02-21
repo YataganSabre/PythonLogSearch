@@ -10,3 +10,7 @@ if not(os.path.isfile('awslog.txt')):
     
 # Opening a file
 file = open("awslog.txt","r")
+
+# Splits file by line into a list
+read_file = file.read()
+split_file = read_file.split('\n')
