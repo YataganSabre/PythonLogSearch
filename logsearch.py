@@ -88,7 +88,7 @@ jul_95.close()
 aug_95 = open("August_1995", "w")
 for line in log:
     if "Aug/1995" in line:
-        Aug_95.write(line + "\n")
+        aug_95.write(line + "\n")
         
 aug_95.close()
 
