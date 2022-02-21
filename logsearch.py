@@ -2,6 +2,7 @@
 import urllib.request
 import os.path
 import re
+import datetime as d
 
 # Checks to see if the file exists, if it does NOT exist, download it and countine running.
 if not(os.path.isfile('awslog.txt')):  
@@ -14,116 +15,111 @@ if not(os.path.isfile('awslog.txt')):
 file = open("awslog.txt","r")
 
 read_file = file.read()
-log = read_file.split('\n')
+biglist = read_file.split('\n')
 
-# Splits file into 12 seperate monthly files
-# OCTOBER 1994
-oct_94 = open("October_1994", "w")
-for line in log:
-    if "Oct/1994" in line:
-        oct_94.write(line + "\n")
-        
-oct_94.close()
-
-# NOVEMBER 1994
-nov_94 = open("November_1994", "w")
-for line in log:
-    if "Nov/1994" in line:
-        nov_94.write(line + "\n")
-        
-nov_94.close()
-
-# DECEMBER 1994
-dec_94 = open("December_1994", "w")
-for line in log:
-    if "Dec/1994" in line:
-        dec_94.write(line + "\n")
-        
-dec_94.close()
-
-# JANUARY 1995
-jan_95 = open("January_1995", "w")
-for line in log:
-    if "Jan/1995" in line:
-        jan_95.write(line + "\n")
-        
-jan_95.close()
-
-# FEBRUARY 1995
-feb_95 = open("February_1995", "w")
-for line in log:
-    if "Feb/1995" in line:
-        feb_95.write(line + "\n")
-        
-feb_95.close()
-
-# MARCH 1995
-mar_95 = open("March_1995", "w")
-for line in log:
-    if "Mar/1995" in line:
-        mar_95.write(line + "\n")
-        
-mar_95.close()
-
-# APRIL 1995
-apr_95 = open("April_1995", "w")
-for line in log:
-    if "Apr/1995" in line:
-        apr_95.write(line + "\n")
-        
-apr_95.close()
-
-# MAY 1995
-may_95 = open("May_1995", "w")
-for line in log:
-    if "May/1995" in line:
-        may_95.write(line + "\n")
-        
-may_95.close()
-
-# JUNE 1995
-jun_95 = open("June_1995", "w")
-for line in log:
-    if "Jun/1995" in line:
-        jun_95.write(line + "\n")
-        
-jun_95.close()
-
-# JULY 1995
-jul_95 = open("July_1995", "w")
-for line in log:
-    if "Jul/1995" in line:
-        jul_95.write(line + "\n")
-        
-jul_95.close()
-
-# AUGUST 1995
-aug_95 = open("August_1995", "w")
-for line in log:
-    if "Aug/1995" in line:
-        aug_95.write(line + "\n")
-        
-aug_95.close()
-
-# SEPTEMBER 1995
-sep_95 = open("September_1995", "w")
-for line in log:
-    if "Sep/1995" in line:
-        sep_95.write(line + "\n")
-        
-sep_95.close()
-
-# OCTOBER 1995
-oct_95 = open("October_1995", "w")
-for line in log:
-    if "Oct/1995" in line:
-        oct_95.write(line + "\n")
-        
-oct_95.close()
-    
-
-
-
-# Splits file by line into a list
-read_file = file.read()
-split_file = read_file.split('\n')
+file.close()
+#i'm not testing to see if every file exists and then making the ones that don't exist, if it doesn't see the first file it'll make all of them again
+#only opens the aws file if we need to work on it
+if not(os.path.isfile('oct.txt')):
+  print("Creating seperate text files, please wait.")
+  txt1=open('oct1994.txt', 'w')
+  txt2=open('nov.txt', 'w')
+  txt3=open('dec.txt', 'w')
+  txt4=open('jan.txt', 'w')
+  txt5=open('feb.txt', 'w')
+  txt6=open('mar.txt', 'w')
+  txt7=open('apr.txt', 'w')
+  txt8=open('may.txt', 'w')
+  txt9=open('jun.txt', 'w')
+  txt10=open('jul.txt', 'w')
+  txt11=open('aug.txt', 'w')
+  txt12=open('sep.txt', 'w')
+  txt13=open('oct1995.txt', 'w')
+  #Making 13 files, I know you said 12 but two different octobers are taking place.
+  for i in biglist:
+    if 'Oct/1994' in i:
+      txt1.write(i + "\n")
+    if 'Nov/1994' in i:
+      txt2.write(i + "\n")
+    if 'Dec/1994' in i:
+      txt3.write(i + "\n")
+    if 'Jan/1995' in i:
+      txt4.write(i + "\n")
+    if 'Feb/1995' in i:
+      txt5.write(i + "\n")
+    if 'Mar/1995' in i:
+      txt6.write(i + "\n")
+    if 'Apr/1995' in i:
+      txt7.write(i + "\n")
+    if 'May/1995' in i:
+      txt8.write(i + "\n")
+    if 'Jun/1995' in i:
+      txt9.write(i + "\n")
+    if 'Jul/1995' in i:
+      txt10.write(i + "\n")
+    if 'Aug/1995' in i:
+      txt11.write(i + "\n")
+    if 'Sep/1995' in i:
+      txt12.write(i + "\n")
+    if 'Oct/1995' in i:
+      txt13.write(i + "\n")
+  print("Files created, resuming program.")
+  txt1.close()
+  txt2.close()
+  txt3.close()
+  txt4.close()
+  txt5.close()
+  txt6.close()
+  txt7.close()
+  txt8.close()
+  txt9.close()
+  txt10.close()
+  txt11.close()
+  txt12.close()
+  txt13.close()
+#we don't have to open read all of the txt files to do the rest of the assignment so...we won't! 
+#just going to use the big list we made rather then make like 13 different loops
+monday = 0
+tuesday = 0
+wednesday = 0
+thursday = 0
+friday = 0
+saturday = 0
+sunday = 0
+count = 0
+regex = re.compile("(.*?) - - \[(.*?):(.*) .*\] \"[A-Z]{3,6} (.*?) HTTP.*\" (\d{3}) (.+)")  
+for i in biglist:
+  pieces = re.split(regex, i)
+  if len(pieces) > 2: #some parts don't have proper requests, so they get this to sift through them
+    count += 1
+    date = d.datetime.strptime(pieces[2], '%d/%b/%Y')
+    day = d.datetime.weekday(date)
+    if day == 0:
+      monday += 1
+    if day == 1:
+      tuesday += 1
+    if day == 2:
+      wednesday += 1
+    if day == 3:
+      thursday += 1
+    if day == 4:
+      friday += 1
+    if day == 5:
+      saturday += 1
+    if day == 6:
+      sunday += 1
+#52 mondays (or any unique day) in a year, but counting numbers down since we aren't doing EXACTLY a year
+#for instance, from the 24th of October 1994 to 11th of October 1995 there is 50 Mondays, 50 Tuesdays, 50 Wednesdays, 49 Thursdays, 49 Fridays, 49 Saturdays, 49 Sundays
+monday = monday/50
+tuesday = tuesday/50
+wednesday = wednesday/50
+thursday = thursday/49
+friday = friday/49
+saturday = saturday/49
+sunday = sunday/49
+dayaverage=(monday+tuesday+wednesday+thursday+friday+saturday+sunday)/7 #averages of all days combined and then averages again
+weekaverage=monday+tuesday+wednesday+thursday+friday+saturday+sunday #weekly average is just the average of each day but combined
+monthaverage = count/12 #being lazy on this one
+print("There is a average of ", dayaverage, " requests for any given day.")
+print("There is a average of ", weekaverage, " requests for any given week.")
+print("There is a average of ", monthaverage, " requests for any given month.")
