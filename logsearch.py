@@ -11,6 +11,7 @@ if not(os.path.isfile('awslog.txt')):
     
 # Opens and splits file
 file = open("awslog.txt","r")
+
 read_file = file.read()
 log = read_file.split('\n')
 
@@ -120,3 +121,8 @@ for line in log:
 oct_95.close()
     
 
+
+
+# Splits file by line into a list
+read_file = file.read()
+split_file = read_file.split('\n')
